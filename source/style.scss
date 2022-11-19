@@ -2,7 +2,14 @@
 @import "nullcss.scss";
 
 // Шрифты
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+  url('../fonts/Montserrat-Regular.eot') format('eot'),
+  url('../fonts/Montserrat-Regular.ttf') format('ttf'),
+  url('../fonts/Montserrat-Regular.woff') format('woff'),
+  url('../fonts/Montserrat-Regular.woff2') format('woff2');
+}
 // Миксины
 @mixin main__button {
   .main__button {
