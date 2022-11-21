@@ -8,24 +8,24 @@
   url('../fonts/Montserrat-Regular.eot') format('eot'),
   url('../fonts/Montserrat-Regular.ttf') format('ttf'),
   url('../fonts/Montserrat-Regular.woff') format('woff'),
-  url('../fonts/Montserrat-Regular.woff2') format('woff2');
+  url('../fonts/Montserrat-Regular.woff2') format('woff2 ');
 }
 // Миксины
 @mixin main__button {
   .main__button {
     display: flex;
-    margin: 0 auto;
+    align-items: center;
     background: none;
     border: 1px solid #000;
     & p {
-      padding: 17.5px 16px 17.5px 30px;
+      // padding: 17.5px 16px 17.5px 30px;
       font-weight: 500;
       font-size: 16px;
       line-height: 20px;
       font-family: "Montserrat";
     }
     & i {
-      padding: 21px 32px 21px 0;
+      // padding: 21px 32px 21px 0;
       font-weight: 600;
     }
   }
@@ -73,6 +73,8 @@ body {
     }
     .special__offer {
       padding: 60px 0 530px 0;
+      display: flex;
+      justify-content: center;
       @include main__button();
       .main__button {
         p {
@@ -87,12 +89,15 @@ body {
   // About
   .about {
     @include flexbox();
-    .about__img {
-    }
+    align-items: center;
+    justify-content: end;
+    background: #f1f1f1;
+    background-image: url(../img/main__img/About__img.png);
+    background-repeat: no-repeat;
+    min-height: 940px;
+
     .about__content {
-      padding: 275px 353px 275px 105px;
       text-align: right;
-      background: #f1f1f1;
       width: 50%;
       max-height: 940px;
 
@@ -100,10 +105,12 @@ body {
         font-weight: 500;
         font-size: 48px;
         line-height: 59px;
+        text-align: right;
       }
       .about__text {
         padding: 60px 0 0 0;
         .about__paragrafs {
+          text-align: right;
           font-weight: 500;
           font-size: 16px;
           line-height: 150%;
@@ -129,8 +136,8 @@ body {
       }
       .go__link {
         position: absolute;
-        top: 425px;
-        right: 410px;
+        top: 45%;
+        right: 22%;
         @include main__button();
       }
     }
@@ -155,7 +162,10 @@ body {
         height: 210px;
         text-align: center;
         border-right: 1px solid #595959;
-        padding: 45px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         border-bottom: 1px solid #595959;
         font-weight: 500;
         font-size: 16px;
@@ -163,14 +173,19 @@ body {
         & img {
           padding-bottom: 20px;
         }
-        .offer__button{
-          padding-top: 35px;
-          @include main__button();
-          .main__button{
+        .main__button{
+            display: flex;
+            align-items: center;
+            background: none;
             border: 1px solid #fff;
+            height: 55px;
             color: #fff;
+            justify-content: center;
+            width: 75.5%;
+            & p{
+              margin-right: 15px;
+            }
           }
-        }
       }
       .last_in_row {
         border-right: none;
