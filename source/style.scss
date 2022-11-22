@@ -253,11 +253,12 @@ body {
     background-image: url(../img/main__img/Request&Offer.png);
     background-repeat: no-repeat;
     padding: 173px 0 158px 0;
+    background-size: 50% 100%;
     .container{
       @include flexbox();
       justify-content: space-between;
       .request__content{
-        margin: 0 103px 0 0;
+        margin: 0 15% 0 0;
         .request__content__title{
           font-size: 48px;
           line-height: 59px;
